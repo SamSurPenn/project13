@@ -1,0 +1,68 @@
+## Automated ELK Stack Deployment
+
+The files in this repository were used to configure the network depicted below.
+
+
+
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the ELK file may be used to install only certain pieces of it, such as Filebeat.
+
+ 
+
+### Description of the Topology
+
+The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
+
+Load balancing ensures that the application will be highly protected, in addition to restricting access to the network.
+What aspect of security do load balancers protect? They help protect servers against DDoS attacks. What is the advantage of a jump box? Helps improve security
+
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the Filebeat and system Metricbeat.
+ What does Filebeat watch for?Log Files 
+: What does Metricbeat record?Log Files
+
+The configuration details of each machine may be found below.
+
+
+
+### Access Policies
+
+The machines on the internal network are not exposed to the public Internet. 
+
+Only the virtual machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+: Add whitelisted IP addresses_
+10.101.100.01
+Machines within the network can only be accessed by network.
+Which machine did you allow to access your ELK VM? RED-Team What was its IP address?10.101.100.01
+
+
+
+
+### Elk Configuration
+
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
+What is the main advantage of automating configuration with Ansible? Helps ELK and log files be stored easier 
+
+The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
+
+
+
+### Target Machines & Beats
+This ELK server is configured to monitor the following machines:
+List the IP addresses of the machines you are monitoring_
+10.101.100.01
+
+
+
+
+### Using the Playbook
+In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
+
+SSH into the control node and follow the steps below:
+- Copy the Log file to Docker.
+- Update the Docker file to include...
+- Run the playbook, and navigate to Ansible to check that the installation worked as expected.
+
+_TODO: Answer the following questions to fill in the blanks:_
+- _Which file is the playbook? Ansible
+ Where do you copy it? Docker
+- _Which file do you update to make Ansible run the playbook on a specific machine? Sudo Ansible Run
+ How do I specify which machine to install the ELK server on versus which to install Filebeat on? Ansible and Firebeat work together- _Which URL do you navigate to in order to check that the ELK server is running? WWW.docker.com 
